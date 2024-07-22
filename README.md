@@ -2,7 +2,7 @@
 
 Assistant generative text you can use that uses Ollama AI with any model from the Ollama AI provider.
 
-![image](.github/images/image.png)
+![image](.github/images/screenshot.png)
 
 ## Technology Stack
 
