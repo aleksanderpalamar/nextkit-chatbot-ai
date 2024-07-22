@@ -3,13 +3,15 @@ import Image from "next/image"
 
 export const Header = () => {
   return (
-    <header className="bg-zinc-800 text-primary-foreground py-4 px-6 flex items-center justify-between">
+    <header className="bg-violet-200 text-zinc-800 
+    py-4 px-6 flex items-center justify-between 
+    border-b border-violet-300">
       <div className="flex items-center gap-4">
         <Avatar className="w-8 h-8">
           <AvatarImage src="/placeholder-user.jpg" />
           <AvatarFallback>
             <div className="w-28 h-28 rounded-full bg-violet-500 flex items-center justify-center overflow-hidden">
-              <Image 
+              <Image
                 src="/assets/robot_yellowJump.png"
                 alt="robot"
                 width={24}
