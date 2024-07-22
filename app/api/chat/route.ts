@@ -6,7 +6,9 @@ export async function POST(request: Request) {
 
   const result = await streamText({
     model: ollama("gemma2"),
-    messages,
+    maxTokens: 1000,
+    temperature: 0.7,
+    messages
   });
 
   return result.toAIStreamResponse();

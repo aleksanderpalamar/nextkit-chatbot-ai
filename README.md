@@ -1,6 +1,8 @@
 # NextKit ChatBot AI
 
-This is an example of NextKit ChatBot AI that uses Ollama AI with model `gemma2` for chatbot.
+Assistant generative text you can use that uses Ollama AI with any model from the Ollama AI provider.
+
+![image](.github/images/image.png)
 
 ## Technology Stack
 
@@ -9,6 +11,18 @@ This is an example of NextKit ChatBot AI that uses Ollama AI with model `gemma2`
 - Tailwind CSS
 - Ollama AI
 - SDK Vercel AI
+
+## Usage
+```ts
+  const result = await streamText({
+    model: ollama("gemma2"), // or any other Ollama AI model
+    maxTokens: 1000,
+    temperature: 0.7,
+    messages
+  });
+```
+## Requirements
+You must have [Ollama](https://ollama.com/) installed on your computer.
 
 ## Start Project
 
@@ -29,14 +43,6 @@ npm run dev
 ```
 
 4. Open http://localhost:3000 in your browser
-
-## Requirements
-
-- Ollama AI model `gemma2` or any other Ollama AI model
-
-## Limitations
-
-- Ollama AI model `gemma2` is limited to 1,000 tokens
 
 ## Changelog
 
