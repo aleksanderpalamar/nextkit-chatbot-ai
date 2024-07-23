@@ -29,7 +29,7 @@ export const FormComponent = () => {
 
   useEffect(() => {
     if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+      messagesEndRef.current.scrollIntoView({ behavior: "auto" });
     }
   }, []);
 
@@ -39,7 +39,7 @@ export const FormComponent = () => {
         {messages.map((message, index) => (
           <div key={index} className="message-spacing clear-both">
             {message.role === "user" ? (
-              <div className="bg-violet-200 text-zinc-800 rounded-lg p-4 max-w-[80%] float-left mt-4 mb-4">
+              <div className="bg-violet-200 text-zinc-800 rounded-lg p-4 max-w-[80%] float-left mt-4 mb-4 shadow-lg box-border">
                 <div className="flex items-center gap-2">
                   <Avatar className="w-8 h-8">
                     <AvatarImage src="/placeholder-user.jpg" />
@@ -54,7 +54,7 @@ export const FormComponent = () => {
                 {message.content}
               </div>
             ) : (
-              <div className="bg-muted text-foreground rounded-lg p-4 max-w-[80%] float-right prose bg-violet-100">
+              <div className="bg-muted text-foreground rounded-lg p-4 max-w-[80%] float-right prose bg-violet-100 shadow-lg box-border">
                 <div className="flex items-center gap-2">
                   <Avatar className="w-8 h-8">
                     <AvatarImage src="/placeholder-user.jpg" />
@@ -81,7 +81,7 @@ export const FormComponent = () => {
         <div className="clear-both" />
         <div ref={messagesEndRef} />
       </div>
-      <div className="bg-violet-200 p-4 flex items-center border-t border-violet-300">
+      <div className="bg-violet-200 p-4 flex items-center border-t border-violet-300 shadow-lg box-border">
         <Label className="w-full flex items-center gap-2 bg-violet-400 rounded-md p-2 
         focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:ring-offset-violet-50">
           <textarea
